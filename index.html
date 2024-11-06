@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучаем формы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>
+            Заполните форму ниже
+        </h2>
+        <!-- на практике в актион вставляется скрипт обработки формы -->
+        <form action="send.html" name="myForm" method="GET">
+            <fieldset>
+                <legend>
+                    Авторизация
+                </legend>
+                <label>
+                    <p>
+                        Как Вас зовут?
+                    </p>
+                    <input type="text" name="myFormName" maxlength="10" placeholder="Например Вася" required>
+                </label>
+                <label for="myFormPhone">
+                    <p>
+                        Ваш телефон для связи
+                    </p>
+                </label>
+                <!-- label позволяет увеличить область клика -->
+                <input type="text" name="myFormPhone" id="myFormPhone" value="12345">
+                <input type="submit" value="Позвоните мне!">
+                <input type="reset">
+                <input type="image" src="img/button1.png">
+                <input type="button" value="Для JS">
+            </fieldset>
+            <p>
+                Один ответ из всех вариантов - Курите ли Вы?
+            </p>
+            <label>Да - <input type="radio" name="myFormSmocking" value="Yes"></label>
+            <label>Нет - <input type="radio" name="myFormSmocking" value="No" checked></label>
+            <label>Иногда - <input type="radio" name="myFormSmocking" value="Sometimes"></label>
+            <label>Если много выпью - <input type="radio" name="myFormSmocking" value="Alcohol"></label>
+            <hr>
+            <p>
+                Выбрать более одного варианта - Какие газеты вы читаете?
+            </p>
+            <label>Гомельская правда - <input type="checkbox" name="myFormPress_GP" value="GP" checked></label>
+            <label>Аргументы и факты - <input type="checkbox" name="myFormPress_AiF" value="AiF"></label>
+            <label>Комсомольская правда - <input type="checkbox" name="myFormPress_KP" value="KP"></label>
+            <label>Никакие - <input type="checkbox" name="myFormPress_Not" value="Not"></label>
+            <hr>
+            <p>
+                Элемент выборки - Сколько часов в сутках вы спите?
+            </p>
+            <select name="myFormSleep" size="5" multiple>
+                <option value="0">менее 3 часов</option>
+                <option value="3">3 часа</option>
+                <option value="4" selected>4 часа</option>
+                <option value="5">5 часов</option>
+                <option value="6">6 часов</option>
+            </select>
+            <hr>
+            <p>
+                Оставьте отзыв о нас:
+            </p>
+            <textarea name="myFormText" cols="80" rows="20"></textarea>
+            </form>
+    </div>
+</body>
+</html>
